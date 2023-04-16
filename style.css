@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(212, 211, 211);
+}
+
+body {
+    background: #110f0f;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.basic-properties {
+    margin: 1%;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-data,
+.card-cover {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+
+.card-cover {
+    position: absolute;
+    width: 100%;
+    background: #000000;
+    border: 1px solid rgb(32, 32, 32);
+}
+
+.card-data {
+    padding: 1%;
+}
+
+.card-data h1 {
+    text-transform: uppercase;
+}
+
+.first-data {
+    background: linear-gradient(45deg, rgb(65, 68, 33), rgb(184, 181, 12));
+}
+
+.second-data {
+    background: linear-gradient(45deg, rgb(13, 24, 54), rgb(25, 173, 82));
+}
+
+.third-data {
+    background: linear-gradient(45deg, rgb(13, 24, 54), rgb(184, 20, 96));
+}
+
+.basic-properties:hover .card-a-animation {
+    transform: scale(0);
+    border-radius: 100%;
+    -webkit-transform-origin-y: 300px;
+    opacity: 0;
+    transform: 0.3s all;
+}
+
+.basic-properties:hover .card-b-animation {
+    transform: translateX(300px);
+    -webkit-transform-origin-z: 200px;
+    opacity: 0;
+}
+
+.basic-properties:hover .card-c-animation {
+    border-radius: 10%;
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+}
